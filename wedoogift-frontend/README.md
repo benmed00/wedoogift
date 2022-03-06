@@ -71,11 +71,7 @@ Within the download you'll find the following directories and files:
 
 ## Screen-shot
 
-![alt text]((<https://firebasestorage.googleapis.com/v0/b/benyakoub.appspot.com/o/Process%20Flow.png?alt=media&token=058d9ca5-954b-47be-9174-0645746ac1b7>? "Screen shot of the running app")
-
-[Click to see the screen shot](https://gitlab.com/benyakoub00med/wedoogift-frontend/-/blob/main/maquette.PNG)
-
-![](https://gitlab.com/benyakoub00med/wedoogift-frontend/-/blob/main/maquette.PNG)
+![screen-maquette](https://user-images.githubusercontent.com/17787436/156935516-97936706-1339-4dbc-a974-97874d1beab9.jpg)
 
 ### Get Started
 
@@ -92,9 +88,7 @@ Within the download you'll find the following directories and files:
 
 ### Flow Chart
 
-[Flow colored Chart](https://firebasestorage.googleapis.com/v0/b/benyakoub.appspot.com/o/Process%20Flow.png?alt=media&token=058d9ca5-954b-47be-9174-0645746ac1b7)
-
-<https://gitlab.com/benyakoub00med/wedoogift-frontend/-/blob/main/Process_Flow.png>
+![chart-flow](https://user-images.githubusercontent.com/17787436/156935517-599fec33-2b5b-4eed-850d-e4bb0db59d20.jpg)
 
 ## Contribution
 
