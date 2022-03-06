@@ -1,0 +1,106 @@
+ul {
+    list-style: none;
+}
+
+#value {
+    width: 20%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#toast {
+    width: -webkit-fill-available;
+}
+
+#valider {
+    background-color: #cd282c;
+    width: 20%;
+    height: 50px;
+    margin-left: 40%;
+    margin-top: 10%;
+    /* background-color: #163288; */
+}
+
+#formInput {
+    background-color: #f5f5f5;
+    padding: inherit;
+}
+
+#resultDisplay {
+    padding: 5%;
+}
+
+.resultBloc {
+    background-color: #28c58b;
+    padding: 5%;
+}
+
+.textStyle {
+    font-weight: bold;
+    color: #ebeff7;
+}
+
+#cardList {
+    margin: revert;
+}
+
+.cardDispatcherBloc {
+    padding: 0 25%;
+    /* background-image: url("../../assets/images/background.png"); */
+}
+
+.cardDispatcherBloc .bouton {
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.cardDispatcherBloc .bouton:hover {
+    box-shadow: 0 2px 6px grey;
+}
+
+.cardDispatcherBloc .validBtn {
+    background: #ec4848;
+    color: white;
+    border: none;
+    padding: 0 15px;
+}
+
+.cardDispatcherBloc .changeBtn:hover {
+    font-size: 19px;
+}
+
+.cardDispatcherBloc .changeBtn {
+    cursor: pointer;
+    color: #ec4848;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.cardDispatcherBloc .formErrorBloc {
+    margin-top: 5px;
+}
+
+.cardDispatcherBloc .formErrorBloc .formError {
+    display: flex;
+    color: red;
+    margin-left: 30px;
+    font-style: italic;
+}
+
+.cardDispatcherBloc .resultBloc {
+    margin-top: 20px;
+}
+
+.cardDispatcherBloc .resultBloc .propBtn {
+    margin: 10px 0;
+    padding: 0 30px;
+    color: #ec4848;
+    border: #ec4848 1px solid;
+}
+
+@media screen and (max-width: 700px) {
+    .cardDispatcherBloc {
+        padding: 0 5%;
+    }
+}

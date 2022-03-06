@@ -1,0 +1,75 @@
+<div class="cardDispatcherBloc">
+    <ngb-toast [autohide]="false" id="toast">
+        <form id="formInput" [formGroup]="cardsCalculatorForm">
+            <div class="row form-group">
+                <div class="col-12">
+
+                    <h3 for="value" class="required">Montant désiré :</h3>
+                    <div class="row">
+                        <input required type="number" id="value" name="value" class="form-control col-11" formControlName="value" [(ngModel)]="result.value">
+                        <hr>
+                        <!-- Suggestion buttons -->
+                        <div class="btn-group" role="group">
+                            <label class="btn-primary" ngbButtonLabel (click)="previousAmount()">
+                                <input type="checkbox" class="btn-check" ngbButton> Montant précédent
+                            </label>
+                            <label class="btn-primary" ngbButtonLabel>
+                                <input type="checkbox" class="btn-check" ngbButton (click)="nextAmount()"> Montant
+                                suivant
+                            </label>
+                        </div>
+                    </div>
+
+                    <!--Messages d'erreurs-->
+                    <div class="formErrorBloc">
+                        <span class="formError" *ngIf="cardsCalculatorForm?.get('value')?.hasError('empty')">Veuillez
+                            renseigner
+                            ce
+                            champ</span>
+                        <span class="formError" *ngIf="limitError=='max'">Montant maximum 70€</span>
+                        <span class="formError" *ngIf="limitError=='min'">Montant minimum 20€</span>
+                    </div>
+                </div>
+            </div>
+
+            <label class="btn-primary" id="valider" ngbButtonLabel>
+                <input type="submit" class="btn-check" ngbButton (click)="getResult()"> Valider
+            </label>
+        </form>
+    </ngb-toast>
+
+    <!-- Bloc de resultat vert -->
+    <div class="resultBloc">
+        <div id="resultDisplay" *ngIf="!equal">
+            <span id="infoText" class="textStyle"> > Votre montant n'est pas disponible. <br>Veuillez choisir un des montants proposé
+                :</span><br><br>
+            <div class="row">
+                <div class="text-center col-6" *ngIf="floor">
+                    <button type="button" class="btn btn-light" (click)="changeAmount(floor)">{{floor.value}}</button>
+                </div>
+                <div class="text-center col-6" *ngIf="ceil">
+                    <button type="button" class="btn btn-light" (click)="changeAmount(ceil)">{{ceil.value}}</button>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="result.cards.length>0" id="cardsList">
+            <span class="textStyle"> > Votre montant est composé des cartes suivantes :</span>
+            <pre></pre>
+            <ul class="row">
+                <li class="col-6" *ngFor="let card of result.cards; let i = index" [attr.data-index]="i">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../../assets/images/{{i}}.png" class="card-img-top img-fluid" alt="Responsive image">
+                        <div class="card-body">
+                            <h5 class="card-title">Carte {{i+1}} avec Montant: {{card}} € </h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <a href="#" class="btn btn-primary">See more details</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
